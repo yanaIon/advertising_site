@@ -17,7 +17,7 @@ export const products: Product[] = [{
         "street": "ул.Большая Конюшенная",
         "building": "д.19"
     },
-    "publish-date": '1576773899132',
+    "publish-date": '1684566745000',
     "category": "Недвижимость",
     "photos": [
         "https://assets.htmlacademy.ru/content/projects/1-trading-floor/apt_1_1.png",
@@ -48,7 +48,7 @@ export const products: Product[] = [{
             "street": "ул.Лиственная",
             "building": "д.22"
         },
-        "publish-date": "1582418062833",
+        "publish-date": "1524061214245",
         "category": "Недвижимость",
         "photos": [
             "https://assets.htmlacademy.ru/content/projects/1-trading-floor/apt_2_1.png",
@@ -78,7 +78,7 @@ export const products: Product[] = [{
             "street": "ул. Рождественская",
             "building": "д.1"
         },
-        "publish-date": "1592033220171",
+        "publish-date": "1578569567046",
         "category": "Недвижимость",
         "photos": [
             "https://assets.htmlacademy.ru/content/projects/1-trading-floor/apt_3_1.png",

@@ -1,16 +1,16 @@
 import React from "react";
 import ProductItem from '../product-item/product-item';
+import {Product} from "../../types/product";
 
-function ProductList () : JSX.Element {
+
+type ProductListProps = {
+    products: Product[]
+}
+
+function ProductList ({products}: ProductListProps) : JSX.Element {
     return (
         <ul className="results__list">
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
+            {products.map((product) => <ProductItem product={product} key = {product.name} />)}
         </ul>
     )
 }

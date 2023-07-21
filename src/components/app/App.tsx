@@ -5,8 +5,13 @@ import {HelmetProvider} from 'react-helmet-async'; //добавляет заго
 import MainScreen from '../../pages/main-screen/MainScreen';
 import FullProductItem from "../full-product-item/full-product-item";
 import NotFoundScreen from '../../pages/not-found-screen/not-found-screen'
+import {Product} from "../../types/product";
 
-function App(): JSX.Element {
+type AppProps = {
+    products: Product[]
+}
+
+function App({products}: AppProps): JSX.Element {
 
   return (
       <HelmetProvider>
@@ -14,7 +19,7 @@ function App(): JSX.Element {
               <Routes>
                   <Route
                       path={AppRoute.Main}
-                      element={<MainScreen />}
+                      element={<MainScreen products={products} />}
                   />
                   <Route
                       path="*"
