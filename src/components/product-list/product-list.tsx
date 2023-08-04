@@ -10,7 +10,7 @@ type ProductListProps = {
 function ProductList ({products}: ProductListProps) : JSX.Element {
     return (
         <ul className="results__list">
-            {products.map((product) => <ProductItem product={product} key = {product.name} />)}
+            {products.map((product) => <ProductItem product={product} key = {product.id} />)}
         </ul>
     )
 }

@@ -1,7 +1,7 @@
 import {Product} from "../../types/product";
 import dayjs from 'dayjs';
 import 'dayjs/locale/ru'; // Подключение русской локали для day.js
-
+import SliderComponent from '../sliderComponent/sliderComponent';
 
 type ProductItemProps = {
     product: Product,
@@ -16,7 +16,6 @@ function getFormattedTime(publishDate: string) {
 
     const diffInHours = now.diff(publishDateTime, 'hour');
     const diffInDays = now.diff(publishDateTime, 'day');
-    const diffInMonths = now.diff(publishDateTime, 'month');
     const diffInYears = now.diff(publishDateTime, 'year');
 
     if (diffInHours < 24) {
@@ -37,7 +36,7 @@ function getDeclension(number: number, titles: string[]) {
         ];
 }
 
-function ProductItem ({product}: ProductItemProps) : JSX.Element {
+function ProductItem({product}: ProductItemProps): JSX.Element {
     return (
         <li className="results__item product">
             <button
@@ -63,25 +62,27 @@ function ProductItem ({product}: ProductItemProps) : JSX.Element {
                 </svg>
             </button>
             <div className="product__image">
-
-                <div className={`product__image-more-photo ${product.photos.length <= 5 ? 'hidden' : ''}`}>+ {product.photos.length - 5} фото</div>
-                {product.photos.map((photo) => (
-                    <img
-                        src={photo}
-                        srcSet={photo}
-                        width={318}
-                        height={220}
-                        alt={photo}
-                    />
-                ))}
-                <div className="product__image-navigation">
-                    <div className="product__image-navigation">
-                        {product.photos.map((photo, i) => (
-                            <span key={i} className="product__navigation-item product__navigation-item--active" />
-                        ))}
-                    </div>
-                </div>
+              <SliderComponent photos={product.photos.map((url, index) => ({ id: index + 1, url }))} />
             </div>
+            {/*<div className="product__image">*/}
+            {/*    <div*/}
+            {/*        className={`product__image-more-photo ${product.photos.length <= 5 ? 'hidden' : ''}`}>+ {product.photos.length - 5} фото*/}
+            {/*    </div>*/}
+            {/*    {product.photos.map((photo) => (*/}
+            {/*        <img*/}
+            {/*            key={photo}*/}
+            {/*            src={photo}*/}
+            {/*            srcSet={photo}*/}
+            {/*            width={318}*/}
+            {/*            height={220}*/}
+            {/*            alt={photo}*/}
+            {/*        />))}*/}
+            {/*    <div className="product__image-navigation">*/}
+            {/*        {product.photos.map((photo, i) => (*/}
+            {/*            <span key={i} className="product__navigation-item product__navigation-item--active"/>*/}
+            {/*        ))}*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className="product__content">
                 <h3 className="product__title">
                     <a href="/">{product.name}</a>

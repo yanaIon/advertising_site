@@ -5,7 +5,7 @@ function Category () : JSX.Element {
         <div className="filter__select-wrapper">
             <label htmlFor="categories">Категория товаров</label>
             <select id="categories" name="categories">
-                <option value="all" selected>
+                <option defaultValue="all">
                     Все
                 </option>
                 <option value="estate">Недвижимость</option>

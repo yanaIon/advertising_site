@@ -1,6 +1,7 @@
 import {Product} from '../types/product';
 
 export const products: Product[] = [{
+    "id": 1,
     "name": "Двушка в центре Питера",
     "price": 30000000,
     "coordinates": [
@@ -32,6 +33,7 @@ export const products: Product[] = [{
     }
 },
     {
+        "id": 2,
         "name": "Однушка в спальнике Питера",
         "price": 10000000,
         "coordinates": [
@@ -62,6 +64,7 @@ export const products: Product[] = [{
         }
     },
     {
+        "id": 3,
         "name": "Трёшка рядом с Кремлём",
         "price": 22000000,
         "coordinates": [
@@ -96,6 +99,7 @@ export const products: Product[] = [{
         }
     },
     {
+        "id": 4,
         "name": "BMW 5 серии б/у",
         "price": 3370000,
         "coordinates": [
@@ -129,6 +133,7 @@ export const products: Product[] = [{
         }
     },
     {
+        "id": 5,
         "name": "Opel Corsa D",
         "price": 195000,
         "coordinates": [
@@ -159,6 +164,7 @@ export const products: Product[] = [{
         }
     },
     {
+        "id": 6,
         "name": "Apple MacBook Air 13",
         "price": 25000,
         "coordinates": [
@@ -189,6 +195,7 @@ export const products: Product[] = [{
         }
     },
     {
+        "id": 7,
         "name": "Фотоаппарат Nikon D610",
         "price": 85000,
         "coordinates": [
