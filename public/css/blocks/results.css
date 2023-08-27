@@ -34,9 +34,6 @@
   display: none;
 }
 
-.results__item product {
-  height: 220px;
-}
 .results__info {
   margin-top: 30px;
 }
